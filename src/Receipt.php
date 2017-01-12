@@ -1,10 +1,16 @@
 <?php
 namespace TDD;
 
+use \BadMethodCallException;
+
 class Receipt
 {
 	public function total(array $items = [], $coupon = null)
 	{
+		if ($coupon > 1.00) {
+			throw new BadMethodCallException;
+		}
+
 		$sum = array_sum($items);
 
 		if ( is_float($coupon) && $coupon > 0) {
