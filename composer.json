@@ -1,0 +1,16 @@
+{
+    "name": "alanmitchell/phpunit",
+    "require": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "TDD\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TDD\\Test\\": "tests/"
+        }
+    }
+}
